@@ -1,24 +1,24 @@
+/**
+Anthony Borza
+Assignment 2
+**/
+
 h1{
 	text-align: center;
 }
+
 * {
   box-sizing: border-box;
-
-}
-
-.boxes{
-  width: 100%;
 }
 
 .scroll {
   overflow: auto;
   visibility: hidden;
-
-
 }
+
 .scrollbox-content,
 .scroll:hover,
-.scroll:focus,p {
+.scroll:focus {
   visibility: visible;
   margin-left: auto;
   margin-right: auto;
@@ -27,24 +27,40 @@ h1{
 
 .head1,.head2, .head3{
 	margin-top: 0px;
-  text-align: left; 
+  text-align: center; 
   border: 2px solid black;
-  margin: 0px;
+  height: 25px;
   width:125px;
   word-wrap: break-word;
-
+  font-family: "Times New Roman", Times, serif;
 }
 
-p {
+.head1{
+  background-color: #ff6666
+}
+
+.head2{
+  background-color: #ff0000
+}
+
+.head3{
+  background-color: #e6b800
+}
+
+
+p{
   width: 90%;
   height: 150px;
   margin-right: auto;
   margin-left: auto;
   font-family: Helvetica;
-  color:white;
+  color: white;
 }
 
-
+.rows{
+  width: 100%;
+  position: relative;
+}
 
 /*** Desktop **/
 @media (min-width: 992px){
@@ -94,7 +110,6 @@ p {
 
 }
 
-
 /*** Tablet **/
 
 @media (min-width: 768px) and (max-width: 991px){
@@ -142,7 +157,7 @@ p {
 }
 
 
-/*/*** Mobile **/
+/*** Mobile **/
 
 @media (max-width: 767px){
 
@@ -166,40 +181,33 @@ h1{
 	font-family: Arial;
 }
 
-.head1, .head2, .head3{
+.head1, .head2, .head3 {
 
   width:100%;
   text-align: center;
-  overflow-wrap: break-word;
+  border: 1px solid;
+  margin-top: 0px;
+  }
 
-}
+.head1::after {
 
-.head1::after{
- visibility: visible;
- margin-top: 0px;
  text-align: center;  
- margin: 0px;
- content: " Yummy, Boneless, Bony, Meaty, Sauce, Hot, Cooked, Lean, Tender, Fried";
- word-wrap: break-word;
+ content: "\A Yummy, Boneless, Bony, Meaty, Sauce, Hot, Cooked, Lean, Tender, Fried";
+ white-space: pre-wrap;
+
 }
+
 
 .head2:after{
-  visibility: visible;
-  margin-top: 0px;
   text-align: center;  
-  content:" Good, Red, Rare, Cows, Hamburgers, Tasty, Raw, Protein, Nutritious, Leftovers";
-  white-space: pre-line;
-  word-wrap: break-word;
+  content: "\A Good, Red, Rare, Cows, Hamburgers, Tasty, Raw, Protein, Nutritious, Leftovers";
+  white-space: pre-wrap;
 }
 
 .head3:after{
-  visibility: visible;
-  margin-top: 0px;
   text-align: center;  
-  content:" Seafood, Great, Raw, Smelly, Sauce, Living, Cheap, Fresh, Best, Shellfish";
-  word-wrap: break-word;
+  content: "\A Seafood, Great, Raw, Smelly, Sauce, Living, Cheap, Fresh, Best, Shellfish";
+  white-space: pre-wrap;
 }
-
-
 }
 
